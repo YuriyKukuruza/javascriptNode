@@ -38,10 +38,22 @@ logger.log('some message');
 //console.log(Number(0.58) * 100);
 //const kk = Number(0.58) * 100;
 
-const { Employee } = require('./typescript/classes');
 
-const ty = new Employee('Yurka',23);
-ty.displayEmployee();
+//const ty = new Employee('Yurka',23);
+//ty.displayEmployee();
+
+
+//const { Employee } = require('./typescript/functions');
+//import {funcFile} from './typescript/functions'
+
+//const typeFile = require('./typescript/types');
+//const funcFile = require('./typescript/functions');
+//const interfaceFile = require('./typescript/interface');
+//const enumFile = require('./typescript/enum');
+//const classFile = require('./typescript/classes');
+//const guardsFile = require('./typescript/guards');
+const genericTypes = require('./typescript/generic')
+
 
 
 
