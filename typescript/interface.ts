@@ -1,8 +1,8 @@
 
-
+console.log('====================================== TS INTERFACES ===========================================================');
 export interface Rect {
    readonly id: string
-   color:string
+   color?:string
    size: {
     width:number
     height:number
@@ -27,7 +27,8 @@ const rect2: Rect = {
         height:412
     }
 }
-rect2.color = 'black';
+// rect2.color = 'black';
+console.log(rect2);
 
 const rect3 = {} as Rect
 const rect4 = <Rect>{}
@@ -43,13 +44,13 @@ const rect5: ReactWithArea = {
         width: 20,
         height: 20
     },
-    color: 'black',
+    // color: 'black',
     getArea(): number {
         return this.size.width * this.size.height
     } 
 }
 
-//=====================================
+//=====================================interface + class=============================
 
 interface IClock {
     time: Date
@@ -63,15 +64,16 @@ class Clock implements IClock {
     }
 }
 
-//==========================================
+//==========================================to create a lot of dynamic properties for object 
 
 interface Styles {
     border:string
-    [key:string]: string
+    [key:string]: string | number
 }
 
 const ty01:Styles = {
     border: '1px solid black',
-    otherpropertyStr: 'sdfsdf'
+    otherpropertyStr: 'sdfsdf',
+    onemoreproperty: 23
 }
 
